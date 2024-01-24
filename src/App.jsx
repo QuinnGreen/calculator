@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { evaluate } from 'mathjs'; 
+import { evaluate } from 'mathjs'; 
 import './App.css';
 
 const App = () => {
@@ -8,8 +8,8 @@ const App = () => {
   const handleButtonClick = (value) => {
     if (value === '=') {
       try {
-        const result = window.Math.evaluate(display); // Use evaluate function directly
-        setDisplay(result.toString());
+        const result = evaluate(display); 
+        setDisplay(result);
       } catch (error) {
         setDisplay('Error');
       }
@@ -30,8 +30,8 @@ const App = () => {
 
   return (
     <div className="calculator">
+        <p>evaluate not working</p>
       <div className="display">{display}</div>
-      <p>evaluate not working</p>
       <div className="buttons">
         {buttons.map((button) => (
           <button
