@@ -31,6 +31,10 @@
     transition: background-color 0.3s;
   }
   
+  button.clear {
+    background-color: #dc3545;
+    color: #fff;
+  }
   
 
   button.equal {
@@ -38,8 +42,4 @@
     color: #fff;
   }
   
-  button.clear {
-    background-color: #dc3545;
-    color: #fff;
-  }
   

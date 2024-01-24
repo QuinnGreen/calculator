@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-// import { evaluate } from 'mathjs'; 
+// import { evaluate } from 'mathjs'; replaced by inserting script to index.html
 import './App.css';
 
 const App = () => {
