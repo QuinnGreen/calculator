@@ -1,37 +1,32 @@
-import React, { useState } from 'react';
-import { evaluate } from 'mathjs'; 
+import React, { useState} from 'react';
+// import { evaluate } from 'mathjs'; 
 import './App.css';
 
 const App = () => {
-  const [display, setDisplay] = useState('');
+  const [sum, setSum] = useState("");
+
 
   const handleButtonClick = (value) => {
     if (value === '=') {
       try {
-        const result = evaluate(display); 
-        setDisplay(result);
+        const result = math.evaluate(sum); 
+        setSum(result);
       } catch (error) {
-        setDisplay('Error');
+        setSum('Error');
       }
     } else if (value === 'C') {
-      setDisplay('');
+      setSum("");
     } else {
-      setDisplay((prevDisplay) => prevDisplay + value);
+      setSum((sum) => sum + value);
     }
   };
 
-  const buttons = [
-    '7', '8', '9', '/',
-    '4', '5', '6', '*',
-    '1', '2', '3', '-',
-    '0', '.', '=', '+',
-    'C'
-  ];
+  const buttons = ['7', '8', '9', '/','4', '5', '6', '*','1', '2', '3', '-','0', '.', '=', '+','C'];
 
   return (
     <div className="calculator">
-        <p>evaluate not working</p>
-      <div className="display">{display}</div>
+        
+      <div className="display">{sum}</div>
       <div className="buttons">
         {buttons.map((button) => (
           <button
