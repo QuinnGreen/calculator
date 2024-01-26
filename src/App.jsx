@@ -24,6 +24,8 @@ const App = () => {
   const buttons = ['7', '8', '9', '/','4', '5', '6', '*','1', '2', '3', '-','0', '.', '=', '+','C'];
 
   return (
+    <div>
+      <h1>Calculator</h1>
     <div className="calculator">
         
       <div className="display">{sum}</div>
@@ -38,6 +40,7 @@ const App = () => {
           </button>
         ))}
       </div>
+    </div>
     </div>
   );
 };
